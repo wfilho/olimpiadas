@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Saúde Mental</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script defer src="script.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <h1>Calendário de Saúde Mental</h1>
+        <p>Rastreie seu humor e atividades diárias para melhor compreender sua saúde mental.</p>
+    </header>
+
+    <main>
+        <section id="registro">
+            <h2>Escolha o Mês</h2>
+            <input type="month" id="mesSelecionado" />
+        </section>
+
+        <section id="calendario">
+            <!-- Calendário será inserido aqui pelo script.js -->
+        </section>
+
+        <section id="registro">
+            <h2>Registro Diário</h2>
+            <form id="form-registro">
+                <label for="humor">Humor:</label>
+                <select id="humor" name="humor">
+                    <option value="triste">Triste</option>
+                    <option value="ansioso">Ansioso</option>
+                    <option value="calmo">Calmo</option>
+                    <option value="feliz">Feliz</option>
+                    <option value="eufórico">Eufórico</option>
+                </select>
+
+                <label for="atividades">Atividades/Gatilhos:</label>
+                <textarea id="atividades" name="atividades" rows="4" cols="50"></textarea>
+
+                <button type="submit">Salvar Registro</button>
+            </form>
+
+            <h3>Registros Cadastrados</h3>
+            <table id="tabela-registros">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Humor</th>
+                        <th>Nota de Humor</th> <!-- Nova coluna adicionada -->
+                        <th>Atividades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- O conteúdo da tabela será gerado pelo JavaScript -->
+                </tbody>
+            </table>
+            <button id="limpar-registros">Limpar Registros</button>
+        </section>
+
+        <section id="insights">
+            <h2>Insights e Sugestões</h2>
+            <!-- Insights e sugestões serão inseridos aqui pelo script.js -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Calendário de Saúde Mental</p>
+    </footer>
+    <script src="script.js"></script> <!-- Seu arquivo JavaScript -->
+    <script>
+        window.onload = function () {
+            // Verifica se um valor já foi selecionado
+            if (!mesSelecionado.value) {
+                const dataAtual = new Date();
+                mesSelecionado.value = `${dataAtual.getFullYear()}-${(dataAtual.getMonth() + 1).toString().padStart(2, '0')}`;
+            }
+            criarCalendario();
+            const [ano, mes] = mesSelecionado.value.split('-').map(Number);
+            mostrarInsights(mes - 1, ano);
+        };
+    </script>
+</body>
+
+</html>

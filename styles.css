@@ -1,0 +1,132 @@
+/* CSS Moderno para o Calendário de Saúde Mental */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eaeef1; /* Cor de fundo mais suave */
+}
+
+header {
+    background-color: #4CAf50;
+    color: white;
+    padding: 2rem; /* Aumentado para um aspecto mais espaçoso */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para destaque */
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    padding: 1.5rem; /* Aumentado espaço interno */
+    border-radius: 8px; /* Bordas arredondadas para uma aparência mais suave */
+    background-color: white; /* Fundo branco para contraste */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    margin-top: 1.5rem; /* Mais espaço acima dos subtítulos */
+}
+
+#calendario {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#calendario div {
+    border: 1px solid #ddd;
+    margin: 0.2rem;
+    padding: 2rem; /* Aumentado para dar mais espaço em cada dia */
+    width: calc(14.28% - 0.4rem); /* 100% / 7 dias - margem */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    border-radius: 5px; /* Bordas arredondadas para os dias */
+    background-color: #f9f9f9; /* Cor de fundo clara */
+}
+
+#calendario div:hover {
+    background-color: #e0f7fa;
+}
+
+#calendario div.selected {
+    opacity: 0.5; /* Muda a opacidade do dia selecionado */
+}
+
+#registro {
+    margin-top: 2rem;
+    padding: 1rem; /* Adição de padding para o registro */
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-registro {
+    display: flex;
+    flex-direction: column;
+}
+
+label, select, textarea, button {
+    margin-bottom: 1rem;
+    font-size: 1.1rem; /* Aumentar o tamanho da fonte para melhor legibilidade */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50; /* Verde elegante */
+    color: white;
+    border: none;
+    padding: 0.8rem; /* Aumentado para um botão mais proeminente */
+    cursor: pointer;
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s;
+    font-size: 1.1rem; /* Aumentado o tamanho da fonte no botão */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #ddd;
+    position: relative;
+    bottom: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem; /* Aumentada a área de clique */
+    text-align: left;
+    font-size: 1rem; /* Aumentar a fonte para legibilidade */
+}
+
+th {
+    background-color: #4CAf50; /* Cabeçalho estilizado com verde */
+    color: white;
+}
