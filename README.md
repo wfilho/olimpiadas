@@ -1,6 +1,9 @@
 # olimpiadas
 Código da aula de CSS, Javascript e HTM com Google Gemini da Alura
 
+# Link para Teste
+https://olimpiadas-sandy.vercel.app/
+
 ## **README.md**
 
 ### **Calendário de Saúde Mental **
@@ -45,10 +48,8 @@ Este projeto é open-source! Sinta-se à vontade para contribuir com novas funci
 
 ** Comece a usar agora mesmo!**
 
-[Imagem de um calendário colorido com emojis representando diferentes humores]
+<img src="https://github.com/wfilho/olimpiadas/blob/main/Screenshot_1.png" alt="Imagem da Aplicação">
 
 **#saúdemental #bemestar #autoconhecimento #javascript #html #css**
 
-**Link para o repositório:** (Insira aqui o link do seu repositório no GitHub)
-
-**Observação:** Para personalizar ainda mais o README, você pode adicionar capturas de tela da aplicação, um guia de instalação mais detalhado e links para recursos adicionais.
+**Link para o repositório:** (https://github.com/wfilho/olimpiadas)
